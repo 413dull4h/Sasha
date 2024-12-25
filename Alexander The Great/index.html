@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="./.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav style="margin: 1rem 2rem; padding: 1rem 2rem;">
+        <a href="#" class="logo">ЛегкаяИгры</a>
+        <ul class="nav-links">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Игры</a></li>
+            <li><a href="#">Руководства</a></li>
+            <li><a href="#">Форум</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+
+
+    <!-- Features and Benefits Section -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Особенности и Преимущества</h2>
+            <p>Исследуйте основные функции и преимущества как бесплатной, так и платной версий нашего сервиса.
+                Преобразите свой игровой опыт с нами!</p>
+            <br>
+        </div>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <img src="./img/game1.jpg" alt="Бесплатные Игры" class="feature-image">
+                <h3>Бесплатные Игры</h3>
+                <p>Доступ к множеству бесплатных игр без скрытых платежей. Наслаждайтесь играми, не думая о
+                    дополнительных расходах. Наши пользователи получают доступ к самым популярным бесплатным играм с
+                    мгновенным началом.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/game2.jpeg" alt="Премиум Контент" class="feature-image">
+                <h3>Премиум Контент</h3>
+                <p>Получите доступ к эксклюзивному контенту, включая дополнительные уровни, уникальные персонажи и
+                    бонусы, только с платной подпиской. Премиум пользователи получают дополнительные преимущества,
+                    которые делают игру ещё более захватывающей.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/game3.png" alt="Без рекламы" class="feature-image">
+                <h3>Без рекламы</h3>
+                <p>Больше никаких отвлекающих объявлений! В премиум версии все игры предлагаются без рекламы, чтобы вы
+                    могли сосредоточиться на игре и наслаждаться процессом без лишних прерываний.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/game5.jpeg" alt="Поддержка многопользовательских игр" class="feature-image">
+                <h3>Поддержка многопользовательских игр</h3>
+                <p>Играй с друзьями или присоединяйся к глобальным играм с многопользовательским режимом. Наши платные
+                    пользователи получают эксклюзивный доступ к частным серверам и приоритетное подключение.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/game6.jpeg" alt="Поддержка и помощь" class="feature-image">
+                <h3>Поддержка и помощь</h3>
+                <p>Воспользуйтесь приоритетной технической поддержкой с платной подпиской. Мы всегда готовы помочь вам,
+                    чтобы ваше игровое путешествие было максимально комфортным.</p>
+            </div>
+            <div class="feature-card">
+                <img src="./img/game2.jpeg" alt="Премиум Контент" class="feature-image">
+                <h3>Регулярные обновления</h3>
+                <p>Каждый месяц мы добавляем новые игры и обновления, чтобы улучшить ваш опыт. Бесплатные пользователи
+                    также получают доступ к обновлениям, но платные подписчики получают эксклюзивные новинки и
+                    уникальные улучшения.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="section-title">
+            <h2>Цены</h2>
+            <p>Выберите лучший план для вас и наслаждайтесь всеми преимуществами нашего сервиса!</p>
+        </div>
+        <div class="pricing-table">
+            <div class="pricing-tier">
+                <h3>Бесплатный</h3>
+                <p>Доступ к основным функциям, включая игры без скрытых платежей.</p>
+                <ul>
+                    <li>Доступ к бесплатным играм</li>
+                    <li>Ограниченные обновления</li>
+                    <li>Основная поддержка</li>
+                </ul>
+                <p><strong>Бесплатно</strong></p>
+                <a href="#" class="cta-button">Попробовать</a>
+            </div>
+            <div class="pricing-tier pro">
+                <h3>Про</h3>
+                <p>Полный доступ к премиум-контенту и множеству бонусов!</p>
+                <ul>
+                    <li>Доступ к премиум-играм</li>
+                    <li>Игры без рекламы</li>
+                    <li>Ежемесячные бонусы</li>
+                    <li>Приоритетная поддержка</li>
+                    <li>Безопасность данных на высшем уровне</li>
+                </ul>
+                <p><strong>$9.99 / месяц</strong></p>
+                <a href="#" class="cta-button">Подписаться</a>
+            </div>
+            <div class="pricing-tier enterprise">
+                <h3>Предприятие</h3>
+                <p>Для больших команд и компаний, с приоритетной поддержкой и эксклюзивными функциями.</p>
+                <ul>
+                    <li>Поддержка команд до 50 человек</li>
+                    <li>Доступ к эксклюзивным премиум-играм</li>
+                    <li>Облачные серверы с индивидуальными настройками</li>
+                    <li>Персонализированное обслуживание</li>
+                    <li>Регулярные тренинги и вебинары для вашей команды</li>
+                </ul>
+                <p><strong>$29.99 / месяц</strong></p>
+                <a href="#" class="cta-button">Связаться с нами</a>
+            </div>
+        </div>
+        <div class="pricing-note">
+            <p>У нас нет скрытых платежей, вы платите только за те услуги, которые выбрали!</p>
+        </div>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Отзывы</h2>
+            <p>Посмотрите, что говорят наши пользователи!</p>
+        </div>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <img src="./img/user1.jpg" alt="User 1" class="avatar">
+                <p>"Это лучший сайт для бесплатных игр, никаких скрытых платежей!"</p>
+                <span>- Игорь, игрок</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./img/user2.jpg" alt="User 2" class="avatar">
+                <p>"Я перешел на премиум и получил доступ к уникальным играм. Стоит своих денег!"</p>
+                <span>- Алина, подписчик</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./img/user3.jpg" alt="User 3" class="avatar">
+                <p>"Сайт очень удобен в использовании, и интерфейс просто потрясающий!"</p>
+                <span>- Дмитрий, постоянный пользователь</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./img/user4.jpeg" alt="User 4" class="avatar">
+                <p>"Я всегда ищу бесплатные игры с качественной графикой, и этот сайт идеально подходит!"</p>
+                <span>- Екатерина, геймер</span>
+            </div>
+            <div class="testimonial-card">
+                <img src="./img/user5.webp" alt="User 5" class="avatar">
+                <p>"Премиум-аккаунт открыл для меня целый мир эксклюзивного контента, не жалею ни секунды!"</p>
+                <span>- Алексей, подписчик</span>
+            </div>
+        </div>
+        <div class="testimonial-cta">
+            <p>Присоединяйтесь к тысячам довольных пользователей! <a href="#" class="cta-button">Начать сейчас</a></p>
+        </div>
+    </section>
+
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="section-title">
+            <h2>Как это работает</h2>
+            <p>Начать играть просто!</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <img src="./img/theGame1.png" alt="Register Icon" class="step-icon">
+                <h3>1. Зарегистрируйтесь</h3>
+                <p>Просто создайте аккаунт и получите доступ ко всем играм. Это быстро и бесплатно!</p>
+            </div>
+            <div class="step">
+                <img src="./img/theGame2.jpg" alt="Play Icon" class="step-icon">
+                <h3>2. Играйте бесплатно</h3>
+                <p>Начните играть сразу без скрытых платежей или подписок. Наслаждайтесь игрой!</p>
+            </div>
+            <div class="step">
+                <img src="./img/theGame3.jpg" alt="Upgrade Icon" class="step-icon">
+                <h3>3. Обновите при необходимости</h3>
+                <p>Подпишитесь на премиум, чтобы получить дополнительные бонусы, эксклюзивные игры и отсутствие рекламы.
+                </p>
+            </div>
+        </div>
+        <div class="cta">
+            <p>Готовы начать? <a href="#" class="cta-button">Начать играть</a></p>
+        </div>
+    </section>
+
+
+
+
+    <!-- Free vs Premium Comparison Section -->
+    <section class="free-vs-premium">
+        <div class="section-title">
+            <h2>Сравнение: Бесплатная vs Премиум</h2>
+            <p>Смотрите, что отличает бесплатную версию от премиум!</p>
+        </div>
+        <div class="comparison-table-container">
+            <table>
+                <tr>
+                    <th>Функция</th>
+                    <th>Бесплатная</th>
+                    <th>Премиум</th>
+                </tr>
+                <tr>
+                    <td>Доступ к играм</td>
+                    <td>Да</td>
+                    <td>Да</td>
+                </tr>
+                <tr>
+                    <td>Без рекламы</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                </tr>
+                <tr>
+                    <td>Эксклюзивный контент</td>
+                    <td>Нет</td>
+                    <td>Да</td>
+                </tr>
+                <tr>
+                    <td>Поддержка</td>
+                    <td>Базовая</td>
+                    <td>Премиум поддержка</td>
+                </tr>
+            </table>
+        </div>
+        <a href="#" class="cta-button">Подписаться на Премиум</a>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community">
+        <div class="section-title">
+            <h2>Сообщество</h2>
+            <p>Присоединяйтесь к нашему сообществу и будьте в курсе всех событий!</p>
+        </div>
+        <div class="community-content">
+            <div class="community-links">
+                <a href="#" class="community-link">Форум</a>
+                <a href="#" class="community-link">Вебинары</a>
+                <a href="#" class="community-link">Социальные сети</a>
+            </div>
+            <div class="community-description">
+                <p>Наша онлайн-платформа предоставляет не только доступ к бесплатным и премиум-играм, но и отличную
+                    возможность для общения и взаимодействия с другими игроками. Присоединяйтесь к нашему форуму,
+                    участвуйте в вебинарах, и следите за нашими последними новостями в социальных сетях!</p>
+            </div>
+            <div class="community-events">
+                <h3>Предстоящие события</h3>
+                <ul>
+                    <li>Вебинар: "Как выбрать лучшие бесплатные игры" - 28 декабря</li>
+                    <li>Соревнование по игре с призами - 5 января</li>
+                    <li>Live-сессия с разработчиками - 15 января</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Photo Collage Section -->
+
+    <section class="photo-collage">
+        <section class="photo-collage">
+            <div class="section-title">
+                <h2>Галерея Фото</h2>
+            </div>
+            <div class="collage">
+                <img src="./img/game1.jpg" alt="Game 1" class="collage-image">
+                <img src="./img/game2.jpeg" alt="Game 2" class="collage-image">
+                <img src="./img/game3.png" alt="Game 3" class="collage-image">
+                <img src="./img/game5.jpeg" alt="Game 4" class="collage-image">
+                <img src="./img/game6.jpeg" alt="Game 5" class="collage-image">
+                <img src="./img/theGame1.png" alt="Game 6" class="collage-image">
+                <img src="./img/game3.png" alt="Game 3" class="collage-image">
+                <img src="./img/theGame3.jpg" alt="Game 7" class="collage-image">
+                <img src="./img/theGame2.jpg" alt="Game 8" class="collage-image">
+                <img src="./img/game5.jpeg" alt="Game 9" class="collage-image">
+            </div>
+            <!-- Modal for enlarged images -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="caption"></div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Игры</a></li>
+                    <li><a href="#">Руководства</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Условия использования</a></li>
+                </ul>
+
+                <div class="footer-socials">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+
+                <p class="footer-copy">&copy; 2024 Все права защищены. Игры без платных ограничений.</p>
+            </div>
+        </footer>
+
+
+        <script src="script.js"></script>
+        <!-- <script src="./bootstrap.js"></script> -->
+</body>
+
+</html>

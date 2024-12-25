@@ -1,0 +1,1171 @@
+:root {
+    --primary-color: #1e90ff;
+    --secondary-color: #32cd32;
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --link-color: #1e90ff;
+    --button-hover-color: #4682b4;
+    --card-background-color: #1f1f1f;
+    --border-divider-color: #333333;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+nav {
+    background-color: var(--card-background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--border-divider-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links a {
+
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--link-color);
+}
+
+.menu-toggle {
+    display: none;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--border-divider-color);
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 4px 0;
+}
+
+/* Footer styles */
+.footer {
+    background-color: var(--card-background-color);
+    /* Use dark background color */
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: center;
+    color: var(--text-color);
+    /* Light text color */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links li {
+    padding: 0.5rem 1rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--link-color);
+    /* Use primary color for links */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+    /* Blue color on hover */
+}
+
+.footer-socials {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--text-color);
+    /* Use light text color for social links */
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--primary-color);
+    /* Hover effect with blue color */
+}
+
+.footer-copy {
+    color: var(--text-color);
+    /* Light gray text for the copyright message */
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: var(--card-background-color);
+        width: 200px;
+        border: 1px solid var(--border-divider-color);
+        border-radius: 4px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* General Section Styles */
+section {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    text-align: center;
+    /* Center align text */
+}
+
+.section-title h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out;
+}
+
+.section-title p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Animations for smooth fading */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Features Section */
+
+/* Styling for the Features Section */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--background-color);
+    /* Set the background color */
+    height: 100%;
+}
+
+.features .section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.features .section-title p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Feature Card Styles */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Ensure at least 3 columns */
+    gap: 2rem;
+    justify-items: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Adjust grid for smaller screens */
+@media (max-width: 992px) {
+    .feature-cards {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
+        /* 1 column for smaller screens */
+    }
+}
+
+/* Feature Card Styling */
+.feature-card {
+    background-color: var(--card-background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+    /* Limit max width of cards */
+}
+
+/* Hover Effect for Feature Cards */
+.feature-card:hover {
+    transform: translateY(-10px);
+    /* Slightly raise the card on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styling */
+.feature-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Images */
+.feature-card:hover .feature-image {
+    transform: scale(1.05);
+    /* Slight zoom effect on image */
+}
+
+/* Title and Description Styling */
+.feature-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.feature-card p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
+
+/* Pricing Table */
+
+/* Overall Pricing Section */
+.pricing {
+    background-color: var(--background-color);
+    /* Same as the rest of the site */
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Pricing Table */
+.pricing-table {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.pricing-tier {
+    background-color: var(--card-background-color);
+    /* Default background color for the card */
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    max-width: 380px;
+    position: relative;
+    z-index: 1;
+    color: var(--text-color);
+}
+
+/* Hover Effects for Cards */
+.pricing-tier:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background-color: #222;
+    /* Darker shade on hover */
+}
+
+.pricing-tier h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.pricing-tier p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.pricing-tier ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.pricing-tier ul li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.pricing-tier ul li:hover {
+    color: var(--primary-color);
+}
+
+.pricing-tier strong {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.1);
+}
+
+.pricing-note {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #fff;
+}
+
+/* Gradient Hover Effects for Different Plans */
+.pricing-tier.free {
+    background-color: #1f1f1f;
+    /* Dark shade */
+}
+
+.pricing-tier.free:hover {
+    background: linear-gradient(135deg, #1e90ff, #32cd32);
+    /* Free plan gradient */
+    color: #fff;
+}
+
+.pricing-tier.pro {
+    background-color: #222;
+    /* Dark shade */
+}
+
+.pricing-tier.pro:hover {
+    background: linear-gradient(135deg, #133414, #39373c);
+    /* Pro plan gradient */
+    color: #fff;
+}
+
+.pricing-tier.enterprise {
+    background-color: #2a2a2a;
+    /* Darker shade */
+}
+
+.pricing-tier.enterprise:hover {
+    background: linear-gradient(135deg, #4b0082, #22062f);
+    /* Enterprise plan gradient */
+    color: #fff;
+}
+
+/* Animation for the Section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .pricing-tier {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-tier {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Testimonials Section */
+
+/* Overall Testimonials Section */
+.testimonials {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Section Title */
+.testimonials .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.testimonials .section-title p {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+/* Testimonial Cards Container */
+.testimonial-cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* Individual Testimonial Cards */
+.testimonial-card {
+    background-color: var(--card-background-color);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 30%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+    max-width: 380px;
+    margin-bottom: 2rem;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background-color: var(--primary-color);
+    /* Card hover effect */
+    color: #fff;
+}
+
+.testimonial-card p {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.testimonial-card .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover .avatar {
+    transform: scale(1.1);
+}
+
+/* Additional CTA Section */
+.testimonial-cta {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.testimonial-cta p {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-cta a.cta-button {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-cta a.cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+/* Animation for the Section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-card {
+        width: 100%;
+    }
+}
+
+
+
+
+/* How It Works Section */
+
+/* Section Styling */
+.how-it-works {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--background-color);
+    /* Set background color */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.how-it-works .section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.how-it-works .section-title p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Steps Container */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* For smaller screens */
+@media (max-width: 992px) {
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+    }
+}
+
+@media (max-width: 600px) {
+    .steps {
+        grid-template-columns: 1fr;
+        /* 1 column */
+    }
+}
+
+/* Individual Step Styling */
+.step {
+    background-color: var(--card-background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effect for Steps */
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Styling */
+.step-icon {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    /* Increase the size of the icons */
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.step:hover .step-icon {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+}
+
+/* Title and Description Styling */
+.step h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.step p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* CTA Button Styling */
+.cta {
+    margin-top: 3rem;
+}
+
+.cta-button {
+    background-color: var(--cta-button-bg);
+    color: var(--cta-button-text);
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--cta-button-hover-bg);
+}
+
+
+
+/* Free vs Premium Comparison */
+
+/* Section Styling */
+.free-vs-premium {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Section Title */
+.free-vs-premium .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.free-vs-premium .section-title p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+/* Table Container */
+.comparison-table-container {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+th,
+td {
+    padding: 1.5rem;
+    border: 1px solid var(--border-divider-color);
+    font-size: 1rem;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effects for Rows */
+tr:hover td {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+/* Animation for the Section */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Community Section */
+/* Community Section Styling */
+.community {
+    background-color: var(--background-color);
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Section Title */
+.community .section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.community .section-title p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+}
+
+/* Links Styling */
+.community .community-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.community .community-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.community .community-link:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Community Description */
+.community .community-description {
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-color);
+}
+
+/* Community Events */
+.community .community-events {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.community .community-events h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.community .community-events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.community .community-events li {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+    color: var(--text-color);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.community .community-events li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .community .community-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .community .community-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .community .community-events li {
+        font-size: 1rem;
+    }
+}
+
+
+/* Photo Collage Styling */
+
+
+.photo-collage {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Gallery Styles */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+.collage-image {
+    width: 100%;
+    max-width: 350px;
+    /* Set max width */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.collage-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    margin: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#caption {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 
+.photo-collage {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.photo-collage .section-title h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.collage-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.collage-image:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+ 
+    object-fit: contain;
+    
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+} */
